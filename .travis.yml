@@ -4,14 +4,14 @@ services:
 
 
 script:
-  - docker build -t mannydesigns/node .
-  - docker images mannydesigns/node
+  - docker build -t yanyichi/node .
+  - docker images yanyichi/node
 
 before_deploy:
   - docker login -u yanyichi  -p yycwlm143
 
 deploy:
   provider: script
-  script: docker push mannydesigns/node
+  script: docker push yanyichi/node
   on:
     branch: master
